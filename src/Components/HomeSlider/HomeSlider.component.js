@@ -7,7 +7,7 @@ const HomeSlider = (props) => {
   return (
     <div>
         <div className='flex items-start flex-col py-4'>
-            <h3 className={`text-2xl font-bold md:text-sm sm:text-xl ${
+            <h3 className={`text-3xl font-bold md:text-sm sm:text-xl ${
                 props.isDark?"text-white":'text-gray-800'
             }`
             }>{props.title}</h3>

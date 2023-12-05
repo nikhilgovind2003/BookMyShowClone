@@ -15,8 +15,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HomePage from './Components/pages/Home.page';
 import MoviePage from './Components/pages/MoviePage'
-import MovietLayout from './layout/MovieLayout';
-import PlaysLayout from './layout/PlaysLayout';
+import NavBar from './Components/navbar/NavBar';
 
 // axios default settins
 axios.defaults.baseURL = "https://api.themoviedb.org/3";
@@ -29,13 +28,11 @@ function App() {
   return (
     <>
     <DefaultLayout>
-        <DefaultHOC path="/" exact element={<HomePage />} />
+        <DefaultHOC exact path="/" element={<HomePage />} />
     </DefaultLayout>
-        <MovietLayout>
-        <MovieHOC path="/movie/:id" exact element={<MoviePage />} />
-        </MovietLayout>
+        <MovieHOC path="/movie/:id" element={<MoviePage />} />
 
-        <PlaysLayout path="/plays/:123" />
+        {/* <PlaysLayout exact path="/plays/:123" /> */}
     </>
   )
 }

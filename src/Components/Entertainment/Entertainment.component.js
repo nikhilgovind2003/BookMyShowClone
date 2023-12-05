@@ -1,19 +1,19 @@
 import React from 'react';
 import Slider from "react-slick";
 import '../../../src/App.css'
-
+import settings from '../Config/Settings.config';
 
 const EntertainmentCard = (props) => {
   return (
         <div className='w-full h-30 px-2'>
-          <img className='w-full h-full rounded-xl' src={props.src} alt="Entertainment image" />
+          <img className='w-full h-full rounded-xl' src={props.src} alt='entertainment card' />
         </div>
   )
 }
 
 
 
-     {/* EntertainmentCardSlider*/}
+    //  {/* EntertainmentCardSlider*/}
 
 const EntertainmentCardSlider = () => {
   const EntertaiinmentImages = [
@@ -27,18 +27,18 @@ const EntertainmentCardSlider = () => {
       "https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-NiBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/dance-classes-collection-202211140440.png"
     ]
     
-  const EntertainmentSettings = {
-      infinite: true,
-      autoplay:true,
-      slidesToShow: 4,
-      speed: 500,
-      slidesToScroll: 4
-  }
+  // const EntertainmentSettings = {
+  //     infinite: true,
+  //     autoplay:true,
+  //     slidesToShow: 4,
+  //     speed: 500,
+  //     slidesToScroll: 4
+  // }
 
 
   return (
     <>
-    <Slider {...EntertainmentSettings}>
+    <Slider {...settings}>
        {
         EntertaiinmentImages.map((images) =>(
             <EntertainmentCard src={images} />

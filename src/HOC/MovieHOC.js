@@ -13,7 +13,6 @@ const MovieHOC = ({ component : Component , ...rest }) => {
     <Routes>
         <Route 
           {...rest} 
-          
           component = {(props)=>(
             <MovieLayout>
               <Component {...props}/>

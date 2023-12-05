@@ -3,13 +3,10 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 // images
-import image1 from  "../../Images/1698603955302_web.avif"
-import image2 from "../../Images/1699965931661_sunburncolombowebshowcase1240x300.avif"
-import image3 from "../../Images/1700146033284_webpage.avif"
-
-
+import image1 from "../../Images/1698603955302_web.avif";
+import image2 from "../../Images/1699965931661_sunburncolombowebshowcase1240x300.avif";
+import image3 from "../../Images/1700146033284_webpage.avif";
 
 import HeroSlider from "react-slick";
 import { PrevArrow, NextArrow } from "./Arrows.components";
@@ -27,22 +24,22 @@ const HeroCarousel = () => {
   //   }, []);
 
   const settingsLg = {
-    arrows: true,
-    centerMode: true,
-    centerPadding: "200px",
-    autopay: true,
-    infinite: true,
-    setTimeout: 100,
     dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "135px",
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
+
   const settings = {
     arrows: true,
     centerMode: true,
-     autoplay: true,
+    autoplay: true,
     dots: true,
     infinite: true,
     speed: 500,
@@ -52,9 +49,7 @@ const HeroCarousel = () => {
     nextArrow: <NextArrow />,
   };
 
-  const images = [
-    image1, image2, image3
-  ];
+  const images = [image1, image2, image3];
   return (
     <>
       {/* mobile view */}
@@ -62,7 +57,11 @@ const HeroCarousel = () => {
         <HeroSlider {...settings}>
           {images.map((image) => (
             <div className="w-full h-44 md:64 py-3">
-              <img className="w-full h-full md:rounded" src={image} alt="seting" />
+              <img
+                className="w-full h-full md:rounded"
+                src={image}
+                alt="seting"
+              />
             </div>
           ))}
         </HeroSlider>
@@ -73,7 +72,7 @@ const HeroCarousel = () => {
         <HeroSlider {...settingsLg}>
           {images.map((image) => (
             <div className="w-full h-56 px-1 py-1">
-             <img src={image} className="w-full h-full" alt="testing" />
+              <img src={image} className="w-full h-full" alt="testing" />
             </div>
           ))}
         </HeroSlider>

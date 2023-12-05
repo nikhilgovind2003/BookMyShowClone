@@ -2,6 +2,10 @@ import React from 'react'
 import {Routes, Route } from "react-router-dom"
 
 // layout-> DefaultLayout
+
+
+
+import NavBar from '../Components/navbar/NavBar'
 import DefaultLayout from '../layout/DefaultLayout'
 
 
@@ -12,6 +16,7 @@ const DefaultHOC = ({ component : Component , ...rest }) => {
   //props -> path exact
   return (
     <>
+      <NavBar />
     <Routes>
         <Route 
           {...rest} 
