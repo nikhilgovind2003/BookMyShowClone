@@ -4,9 +4,10 @@ import HomeSlider from "../HomeSlider/HomeSlider.component";
 import PosterSlider from "../PosterSlider/PosterSlider";
 import TempImages from "../Config/TenPosters.config";
 import Poster from "../poster/Poster.component";
+import Footer from "../Footer/Footer";
 
 // import axios from 'axios';
-const HomePage = () => {
+const  HomePage = () => {
   // const [PopularMovie, setPopularMovie] = useState([])
   // useEffect(()=>{
   //   const requestPlayMovies = async()=>{
@@ -17,7 +18,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="lg:container mx-auto lg:px-20 mt-12">
+      <div className="lg:container mx-auto lg:px-14 mt-12">
         <div>
           <PosterSlider
             images={TempImages}
@@ -49,18 +50,18 @@ const HomePage = () => {
                 alt="Rupay"
                 className="w-full h-full"
               />
-            </div>
+            </div> 
             <PosterSlider
               images={TempImages}
               title={"Premier Component"}
               paragraph={"Brand new release every Friday"}
               isDark={true}
             />
-          </div>
+           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto mt-24">
         <PosterSlider
           images={TempImages}
           title="Online Streaming Events"
@@ -68,13 +69,15 @@ const HomePage = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 sm:text-center ">
+      <div className="container mx-auto sm:text-center mt-24 ">
         <PosterSlider
           images={TempImages}
           title="Outdoor Events"
           isDark={false}
         />
       </div>
+
+      <Footer />
     </>
   );
 };

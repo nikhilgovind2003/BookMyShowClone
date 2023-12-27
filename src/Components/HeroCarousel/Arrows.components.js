@@ -9,10 +9,11 @@ export const PrevArrow = (props) => {
           ...props.style,
           backgroundColor: "rgba(0,0,0,0.5)",
           padding: "20px",
+          width: "60px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginLeft: "-37px",
+          marginLeft: "-45px",
           borderRadius: "3px",
         }}
         onClick={props.onClick}
@@ -28,21 +29,13 @@ export const PrevArrow1 = (props) => {
         className={props.className}
         style={{
           ...props.style,
-          marginLeft: "-35px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent:"center",
-          borderRadius: "50%",
-          padding: "20px",
-          background: "rgba(0,0,0,0.5)"
+         
         }}
         onClick={props.onClick}
       />
     </div>
   );
 };
-
-
 
 export const NextArrow = (props) => {
   return (
@@ -52,11 +45,14 @@ export const NextArrow = (props) => {
         style={{
           ...props.style,
           backgroundColor: "rgba(0,0,0,0.5)",
-          padding: "20px",
-          marginRight: "-35px",
+          width: "60px",
+          padding: "30px 0",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          paddingTop: "35px",
+          marginRight: "-47px",
+          borderRadius: "3px",
         }}
         onClick={props.onClick}
       />
@@ -71,13 +67,7 @@ export const NextArrow1 = (props) => {
         className={props.className}
         style={{
           ...props.style,
-          backgroundColor: "rgba(0,0,0,0.5)",
-          padding: "20px",
-          marginRight: "-34px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: "50%"
+        
         }}
         onClick={props.onClick}
       />
