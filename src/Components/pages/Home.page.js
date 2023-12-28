@@ -76,7 +76,7 @@ const  HomePage = () => {
           isDark={false}
         />
       </div>
-
+      <div className=" h-44 w-full"></div>
       <Footer />
     </>
   );

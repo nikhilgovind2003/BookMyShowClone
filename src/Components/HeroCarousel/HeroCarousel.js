@@ -53,7 +53,7 @@ const HeroCarousel = () => {
   return (
     <>
       {/* mobile view */}
-      <div className="lg:hidden ">
+      <div className="lg:hidden bg-red-700 ">
         <HeroSlider {...settings}>
           {images.map((image) => (
             <div className="w-full h-44 md:64 py-3">
@@ -71,7 +71,7 @@ const HeroCarousel = () => {
       <div className="hidden lg:block bg-gray-200">
         <HeroSlider {...settingsLg}>
           {images.map((image) => (
-            <div className="w-full h-56 px-1 py-1">
+            <div className="w-full h-full px-1 py-1">
               <img src={image} className="w-full h-full" alt="testing" />
             </div>
           ))}
