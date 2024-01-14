@@ -1,0 +1,8 @@
+api = 27686585f73b546ff5ecdbb27242c80c
+
+url  
+
+curl --request GET \
+     --url 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc' \
+     --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNzY4NjU4NWY3M2I1NDZmZjVlY2RiYjI3MjQyYzgwYyIsInN1YiI6IjY0NzQzMTBjYTg5NGQ2MDBjMjYxMGRlNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UrWBWTEBgtyn1BFNqG4xgf_Q8ee2eHqGgWG7heAvYGc' \
+     --header 'accept: application/json'

@@ -6,7 +6,7 @@ import MovieHero from '../movieHero/MovieHero.component'
 const MoviePage = () => {
   return (
     <div>
-      {/* <MovieHero /> */}
+      <MovieHero />
       {/* <CastComponent /> */}
 
     </div>

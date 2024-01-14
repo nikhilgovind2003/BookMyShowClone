@@ -28,7 +28,7 @@ let settings = {
       {
       breakpoint: 500,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 2,
         slidesToScroll: 1,
         prevArrow: <PrevArrow1 />,
         nextArrow: <NextArrow1 />   

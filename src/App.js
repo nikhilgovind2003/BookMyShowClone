@@ -10,12 +10,11 @@ import DefaultLayout from "./layout/DefaultLayout"
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import HomePage from './Components/pages/Home.page';
 import {Routes, Route} from "react-router-dom"
 import NavBar from './Components/navbar/NavBar';
-import DefaultHOC from './HOC/DefaultHOC';
-import HeroCarousel from './Components/HeroCarousel/HeroCarousel';
-
+import MovietLayout from './layout/MovieLayout';
+import MovieHero from './Components/movieHero/MovieHero.component';
+import Plays from './Components/pages/Plays';
 
 
 // // axios default settins
@@ -28,9 +27,14 @@ function App() {
   return (
     <>
 
-      <NavBar />
+      {/* <NavBar /> */}
       <Routes>
         <Route path="/" element={<DefaultLayout/>} />
+        <Route path="/movie" element={<MovietLayout/>} />
+        <Route path="/plays" element={<Plays />} />
+        <Route path="/movie/:id" element={<MovieHero/>} />
+
+
       </Routes>
         {/* <PlaysLayout exact path="/plays/:123" /> */}
     </>

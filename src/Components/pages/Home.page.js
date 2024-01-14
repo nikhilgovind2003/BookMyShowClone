@@ -1,9 +1,7 @@
 import React from "react";
 import EntertainmentCardSlider from "../Entertainment/Entertainment.component";
-import HomeSlider from "../HomeSlider/HomeSlider.component";
 import PosterSlider from "../PosterSlider/PosterSlider";
 import TempImages from "../Config/TenPosters.config";
-import Poster from "../poster/Poster.component";
 import Footer from "../Footer/Footer";
 
 // import axios from 'axios';
