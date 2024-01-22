@@ -2,26 +2,18 @@ import React from "react";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// images
-import image1 from "../../Images/1698603955302_web.avif";
-import image2 from "../../Images/1699965931661_sunburncolombowebshowcase1240x300.avif";
-import image3 from "../../Images/1700146033284_webpage.avif";
+import axios from "axios";
 
 import HeroSlider from "react-slick";
 import { PrevArrow, NextArrow } from "./Arrows.components";
-// import { useState } from "react";
-// import { useEffect } from "react";
+import Poster from "../poster/Poster.component";
 
 const HeroCarousel = () => {
-  //   const [images, setImages] = useState([]);
-  //   useEffect(() => {
-  //     const requestPlayMovies = async () => {
-  //       const getImage = await axios.get("/movie/now_playing");
-  //       setImages(getImage.data.result);
-  //     };
-  //     requestPlayMovies();
-  //   }, []);
+  const Posters = [
+    "https://assets-in.bmscdn.com/promotions/cms/creatives/1703930188975_web.jpg",
+    "https://assets-in.bmscdn.com/promotions/cms/creatives/1704958137348_desklolla.jpg",
+    "https://assets-in.bmscdn.com/promotions/cms/creatives/1705670802176_warnerdesk.jpg",
+  ];
 
   const settingsLg = {
     dots: true,
@@ -49,13 +41,12 @@ const HeroCarousel = () => {
     nextArrow: <NextArrow />,
   };
 
-  const images = [image1, image2, image3];
   return (
     <>
       {/* mobile view */}
-      <div className="lg:hidden bg-red-700 ">
+      <div className="lg:hidden w-full h-64">
         <HeroSlider {...settings}>
-          {images.map((image) => (
+          {Posters.map((image) => (
             <div className="w-full h-44 md:64 py-3">
               <img
                 className="w-full h-full md:rounded"
@@ -68,9 +59,9 @@ const HeroCarousel = () => {
       </div>
 
       {/* DeskTop */}
-      <div className="hidden lg:block bg-gray-200">
+      <div className="hidden lg:block bg-gray-200 h-54">
         <HeroSlider {...settingsLg}>
-          {images.map((image) => (
+          {Posters.map((image) => (
             <div className="w-full h-full px-1 py-1">
               <img src={image} className="w-full h-full" alt="testing" />
             </div>

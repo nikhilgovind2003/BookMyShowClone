@@ -5,11 +5,11 @@ import PlaysFilter from "../PlaysFilter/PlaysFilter";
 
 const Plays = () => {
   return (
-    <div className=" bg-gray-100 mt-0 ">
+    <div className=" bg-gray-100 pt-12">
       <div className=" container mx-auto px-4 my-4 ">
         <div className=" w-full flex flex-row-reverse">
-          <div className=" w-8/12">
-            <h2 className=" font-bold text-lg mb-2">Plays in Delhi-NCR</h2>
+          <div className=" md:w-8/12">
+            <h2 className=" font-bold text-lg md:text-xl mb-2">Plays in Delhi-NCR</h2>
 
             <div className=" flex flex-wrap">
               <div className=" w-1/2 my-3 md:w-1/3 lg:w-1/4">
@@ -80,7 +80,7 @@ const Plays = () => {
           </div>
 
           <div className=" w-4/12">
-            <h2 className=" font-bold text-lg mb-4">Filter</h2>
+            <h2 className=" font-bold text-lg md:text-xl mb-4">Filter</h2>
 
             <div>
               <PlaysFilter title ={"Day"} tags = {["Today", 'Tomorrow', " Yesterday"]} />

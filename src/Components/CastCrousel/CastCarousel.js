@@ -9,7 +9,7 @@ const CastCarousel = (props) => {
 
     const Cast =[
     {
-        src:"https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/mamta-mohandas-1341-1683012975.jpg",
+        src:"https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/dhanush-3988-18-09-2017-03-32-21.jpg",
         title:"Mamta Mohandas"
     },
 
@@ -42,10 +42,10 @@ const CastCarousel = (props) => {
         <h1 className='text-2xl font-bold'>{props.title}</h1>
             <CastSlide {...settings}>
                 {
-                    TempImages.map((value)=>(
+                    Cast.map((value)=>(
                         <CastComponent {...value}/>
                     ))
-                }   
+                }
             </CastSlide>
 
     </div>
