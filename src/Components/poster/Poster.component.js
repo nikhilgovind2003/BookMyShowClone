@@ -4,7 +4,7 @@ const Poster = (props) => {
   return (
     <div>
       <div className=" flex flex-col justify-between items-center px-2">
-        <div className="lg:w-52 rounded-lg">
+        <div className="lg:h-44 rounded-lg">
           <div className=" rounded-lg">
             <img
               src={`https://image.tmdb.org/t/p/w500${props.poster_path}`}

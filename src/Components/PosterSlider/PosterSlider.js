@@ -11,7 +11,7 @@ const PosterSlider = (props) => {
       <div className=" fflex flex-col items-start">
         <div className=" py-4 flex flex-col items-start">
           <h3
-            className={`font-bold md:text-3xl ml-6 sm:text-xl text-2xl ${
+            className={`font-bold md:text-3xl ml-2 sm:text-xl text-2xl ${
               props.isDark ? "text-white" : "text-gray-800"
             }`}
           >
