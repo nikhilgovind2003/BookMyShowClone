@@ -12,3 +12,8 @@
     right: 3% !important;
     z-index: 1;
 }
+
+a{
+    text-decoration: dashed;
+    
+}

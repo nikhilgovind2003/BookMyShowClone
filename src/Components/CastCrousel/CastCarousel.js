@@ -2,7 +2,7 @@ import React from 'react'
 import CastComponent from './CastComponent'
 import CastSlide from 'react-slick';
 import settings from '../Config/Settings.config';
-import TempImages from '../Config/TenPosters.config';
+// import TempImages from '../Config/TenPosters.config';
 
 
 const CastCarousel = (props) => {
