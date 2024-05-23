@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import settings from "../Config/Settings.config";
 import Slider from "react-slick/lib/slider";
 // import TempImages from "../Config/TenPosters.config";

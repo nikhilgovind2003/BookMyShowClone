@@ -1,15 +1,15 @@
-import React from 'react'
-import Poster from '../Components/poster/Poster.component'
-
+import React from "react";
+import Poster from "../Components/poster/Poster.component";
+import Plays from "../Components/pages/Plays"
+import HeroNavbar from "./../Components/navbar/NavBar"
+import BottomNavbar from "./../Components/navbar/BottomNavBar"
 const PlaysLayout = () => {
-  return (
+  return(
     <>
-    <div className='flex flex-row-reverse'>
-        <Poster src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/live-malayalam-et00355771-1683012470.jpg"
-        title="Hello"/>      
-    </div>
+    <HeroNavbar/>
+    <Plays />
     </>
   )
-}
+};
 
-export default PlaysLayout
+export default PlaysLayout;

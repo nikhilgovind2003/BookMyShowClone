@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import EntertainmentCardSlider from "../Entertainment/Entertainment.component";
 import PosterSlider from "../PosterSlider/PosterSlider";
-import TempImages from "../Config/TenPosters.config";
 import Footer from "../Footer/Footer";
 
 const HomePage = () => {
@@ -52,7 +51,7 @@ const HomePage = () => {
   console.log({ PopularMovie });
   return (
     <>
-      <div className="lg:container lg:mx-auto lg:px-4 mt-12">
+      <div className="lg:container relative lg:mx-auto lg:px-4 mt-12">
         <div className=" mx-24">
           <PosterSlider
             images={NowPlaying}
@@ -94,7 +93,6 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-
       <div className="container mx-auto mt-24">
         <div className=" mx-24">
           <PosterSlider

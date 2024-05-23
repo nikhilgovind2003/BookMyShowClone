@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../App.css";
 import { BiChevronRight } from "react-icons/bi";
 // import CastCarousel from "../CastCrousel/CastCarousel";
@@ -9,7 +9,11 @@ import CastCarousel from "../CastCrousel/CastCarousel";
 import { CiShare2 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
-const SmImage = () => {
+const SmImage = (props) => {
+  const [showMore, setShowMore] = useState(false);
+  const text =
+    props.description ||
+    "Aurangzeb wished to turn Burhanpur into the capital city and appointed Bahadur Khan as the Subhedar who made the lives of its residents miserable. Unable to tolerate this, Chhatrapati Sambhaji Maharaj raids the city and saves the people from the unjust rule.";
   return (
     <div className=" px-4">
       {/* image */}
@@ -53,11 +57,15 @@ const SmImage = () => {
           2h 25m • Action, Drama, Historical • UA • 16 Feb, 2024
         </p>
         <p className=" text-xs">
-          Aurangzeb wished to turn Burhanpur into the capital city and appointed
-          Bahadur Khan as the Subhedar who made the lives of its residents
-          miserable. Unable to tolerate this, Chhatrapati Sambhaji Maharaj raids
-          the city and saves the people from the unjust rule.{" "}
-          <button className=" text-red-500">...less</button>
+          <h6>
+            {showMore ? text : `${text.substring(0, 100)}`}
+            <button
+              className=" text-red-600"
+              onClick={() => setShowMore(!showMore)}
+            >
+              {showMore ? "Show Less..." : "Show More..."}
+            </button>
+          </h6>
         </p>
       </div>
 
@@ -143,20 +151,20 @@ const LargeImage = (props) => {
               <div className=" flex text-md font-medium mt-4 text-black items-center gap-2">
                 <div className=" px-2 py-1 bg-gray-200 rounded-sm">
                   <p>
-                    <a href="2d">2D</a>
+                    <a to="2d">2D</a>
                   </p>
                 </div>
                 <div className=" px-2 py-1 bg-gray-200 rounded-sm">
                   <p className="">
-                    <a href="language">Marathi</a>
+                    <a to="language">Marathi</a>
                   </p>
                 </div>
               </div>
 
               {/* Type */}
               <div className=" mt-6">
-                2h 25m • <a href="action">Action</a> , <a href="drama">Drama</a>{" "}
-                , <a href="historical">Historical</a> • UA • 16 Feb, 2024
+                2h 25m • <Link to="/action">Action</Link> , <Link to="/drama">Drama</Link>{" "}
+                , <Link to="/historical">Historical</Link> • UA • 16 Feb, 2024
               </div>
 
               {/* button */}

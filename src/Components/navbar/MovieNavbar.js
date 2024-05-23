@@ -42,9 +42,9 @@ const NavLg = () => {
             Bhubaneswar
           </span>
             <BiChevronDown />
-          <button className="bg-red-500 text-white text-xs rounded py-1 px-4">
+          <Link to="/sign-in" className="bg-red-500 text-white text-xs rounded py-1 px-4">
             Sign in
-          </button>
+          </Link>
           <div className="w-8 h-8">
             <BiMenu className="w-full h-full" />
           </div>

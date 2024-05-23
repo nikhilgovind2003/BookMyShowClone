@@ -79,9 +79,9 @@ const NavLg = () => {
           <span className="hover:cursor-pointer text-white flex items-center text-xl">
             Kerala <BiChevronDown />
           </span>
-          <button className="w-20 bg-red-500 text-white py-1 px-2 text-md rounded hover:cursor-pointer">
+          <Link to="/sign-in" className="w-20 bg-red-500 text-white py-1 px-2 text-md rounded hover:cursor-pointer">
             Sign In
-          </button>
+          </Link>
           <div className="text-white w-8 h-8">
             <BiMenu className="w-full h-full hover:cursor-pointer" />
           </div>
