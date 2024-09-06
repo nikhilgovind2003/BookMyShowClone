@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import { FaUserTie } from "react-icons/fa";
 import SocialMediaLogo from "./SocialMediaLogo";
 import LogoModel from "./LogoModel";
-
+import {Inbox, Ticket} from "lucide-react"
 const Footer = () => {
+
+
+
   return (
     <div className=" w-full bg-slate-900 h-64 text-white py-6">
       <div className=" flex items-center justify-between px-24">
@@ -31,13 +34,13 @@ const Footer = () => {
         </Link>
 
         <Link className=" flex flex-col items-center gap-4">
-          <FaUserTie size={54} />
-          24/7 CUSTOMER CARE
+          <Ticket size={54} />
+          RESEND BOOKING CONFIRMATION
         </Link>
 
         <Link className=" flex flex-col items-center gap-4">
-          <FaUserTie size={54} />
-          24/7 CUSTOMER CARE
+          <Inbox size={54} />
+          SUBSCRIBE TO THE NEWSLETTER
         </Link>
       </div>
 
@@ -45,11 +48,7 @@ const Footer = () => {
         <div className=" flex flex-col gap-2">
           <h1>MOVIE NOW SHOWING IN KOCHI</h1>
           <div className=" flex items-center gap-2">
-            <Link>Neru</Link> |<Link>SALAR PART 1</Link> |<Link>Neru</Link> |
-            <Link>Neru</Link> |<Link>Neru</Link> |<Link>Neru</Link> |
-            <Link>Neru</Link> |<Link>Neru</Link> |<Link>Neru</Link> |
-            <Link>Neru</Link> |<Link>Neru</Link> |<Link>Neru</Link> |
-            <Link>Neru</Link>
+           
           </div>
         </div>
         <div className=" flex flex-col gap-2">
