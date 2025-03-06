@@ -20,7 +20,7 @@ const PosterSlider = (props) => {
         </div>
         <Slider {...settings}>
           {props.images.map((image) => (
-            <Link to="/movie/:id">
+            <Link to={`/movie/${props?.id}`}>
               <Poster {...image} isDark={props.isDark} />
             </Link>
           ))}

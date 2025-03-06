@@ -1,56 +1,76 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
-
-
 
 const SignIn = () => {
+  const [isLogin, setLogin] = useState(true); // Controls modal visibility
 
-  const [isLogin, setLogin] = useState(true)
+  const toggleModal = () => setLogin((prev) => !prev); // Cleaner toggle function
+
   return (
-    <div className={isLogin?`fixed w-full h-screen translate-x-5 flex items-center justify-center shadow-xl bg-transparent  top-0 z-10`:"hidden"}>
-      <div className="p-4 gap-4 w-[400px] bg-red-400 rounded-xl">
-        <div className=" flex items-center p-4">
-          <span className=" text-center w-full font-semibold text-xl">
-            Get Started
+    <div
+      className={`fixed inset-0 w-full h-screen flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300 z-10 ${
+        isLogin ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+      onClick={toggleModal} // Click outside to close
+    >
+      <div
+        className="p-6 w-full max-w-md bg-white rounded-xl shadow-lg"
+        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-xl font-semibold">Get Started</h2>
+          <button
+            onClick={toggleModal}
+            className="text-gray-500 hover:text-gray-700 text-2xl"
+            aria-label="Close modal"
+          >
+            &times;
+          </button>
+        </div>
+
+        {/* Social Login Options */}
+        <div className="space-y-4 mt-6">
+          <button className="flex items-center justify-center w-full p-3 border border-gray-300 rounded-lg hover:bg-gray-50">
+            <span className="mr-2">Logo</span> {/* Replace with actual icon */}
+            Continue with Google
+          </button>
+          <button className="flex items-center justify-center w-full p-3 border border-gray-300 rounded-lg hover:bg-gray-50">
+            <span className="mr-2">Logo</span>
+            Continue with Email
+          </button>
+          <button className="flex items-center justify-center w-full p-3 border border-gray-300 rounded-lg hover:bg-gray-50">
+            <span className="mr-2">Logo</span>
+            Continue with Apple
+          </button>
+        </div>
+
+        {/* Divider */}
+        <div className="text-center my-6 text-gray-500">OR</div>
+
+        {/* Mobile Input */}
+        <div className="flex items-center gap-2">
+          <span className="flex items-center gap-1 text-gray-600">
+            Logo {/* Replace with flag/icon */}
+            +91
           </span>
-          <Link onClick={()=>{
-            setLogin(!isLogin)
-          }}  to="/">X</Link>
-        </div>
-        <div className="">
-          <div className="flex border p-3 my-6 border-3 border-black">
-            Logo
-            <span className=" w-full text-center ">Continue with Google</span>
-          </div>
-          <div className="flex border p-3 my-6 border-3 border-black">
-            Logo
-            <span className=" w-full text-center ">Continue with Email</span>
-          </div>
-          <div className="flex border p-3 my-6 border-3 border-black">
-            Logo
-            <span className=" w-full text-center">Continue with Apple</span>
-          </div>
-        </div>
-
-        <div className=" text-center w-full">OR</div>
-
-        <div className=" flex items-center gap-2 w-full justify-center">
-          <span>Logo +91</span>
           <input
-            type="text"
-            className=" border-none outline-none w-[250px] border-b-2 border-black"
-            placeholder="Continue with Mobile Number"
+            type="tel"
+            className="w-full p-2 border-b-2 border-gray-300 outline-none focus:border-blue-500"
+            placeholder="Enter mobile number"
+            aria-label="Mobile number"
           />
         </div>
 
-        <div className="mt-24 w-full text-center">
-          <span className="text-sm">
-            I agree to the
-            <a className=" underline" href="terms">
-              Terms & Conditions</a> & <a className="underline" href="privacy">Privacy Policy
-            </a>
-          </span>
+        {/* Terms */}
+        <div className="mt-8 text-center text-sm text-gray-600">
+          I agree to the{" "}
+          <a href="/terms" className="underline hover:text-blue-500">
+            Terms & Conditions
+          </a>{" "}
+          &{" "}
+          <a href="/privacy" className="underline hover:text-blue-500">
+            Privacy Policy
+          </a>
         </div>
       </div>
     </div>

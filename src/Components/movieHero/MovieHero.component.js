@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../../App.css";
 import { BiChevronRight } from "react-icons/bi";
 // import CastCarousel from "../CastCrousel/CastCarousel";
 import { IoMdStar } from "react-icons/io";
 import { FaPlay } from "react-icons/fa";
 import { AiOutlineRise } from "react-icons/ai";
-import CastCarousel from "../CastCrousel/CastCarousel";
 import { CiShare2 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
+
 const SmImage = (props) => {
+
+
+
+
   const [showMore, setShowMore] = useState(false);
   const text =
     props.description ||

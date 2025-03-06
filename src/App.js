@@ -22,9 +22,9 @@ function App() {
     <>
      <Routes>
       <Route path="/" element={<DefaultLayout />} />
-      <Route path="/movies" element={<MovieLayout />} />
+      <Route path="/movie/:id" element={<MovieLayout />} />
       <Route path="/plays" element={<PlaysLayout />} />      
-      <Route path="/signin" element={<SignIn />} />      
+      <Route path="/sign-in" element={<SignIn />} />      
      </Routes>
     </>
   );

@@ -1,52 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import EntertainmentCardSlider from "../Entertainment/Entertainment.component";
 import PosterSlider from "../PosterSlider/PosterSlider";
 import Footer from "../Footer/Footer";
+import { ApiContext } from "../../Contexts/ApiContext";
 
 const HomePage = () => {
-  const [PopularMovie, setPopularMovie] = useState([]);
-  const [NowPlaying, setNowPlaying] = useState([]);
-  const [UpcomingMovies, setUpcomingMovies] = useState([]);
-  const [TopRatedMovie, setTopRatedMovie] = useState([]);
+  const { NowPlaying, PopularMovie, TopRatedMovie,UpcomingMovies } = useContext(ApiContext);
 
-  const getData = async () => {
-    fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=27686585f73b546ff5ecdbb27242c80c"
-    )
-      .then((res) => res.json())
-      .then((json) => setPopularMovie(json.results))
-      .catch((error) => console.log(error));
-  };
-  const upComing = async () => {
-    fetch(
-      "https://api.themoviedb.org/3/movie/upcoming?api_key=27686585f73b546ff5ecdbb27242c80c"
-    )
-      .then((res) => res.json())
-      .then((json) => setUpcomingMovies(json.results))
-      .catch((error) => console.log(error));
-  };
-  const getNowPlaying = async () => {
-    fetch(
-      "https://api.themoviedb.org/3/movie/now_playing?api_key=27686585f73b546ff5ecdbb27242c80c"
-    )
-      .then((res) => res.json())
-      .then((json) => setNowPlaying(json.results))
-      .catch((error) => console.log(error));
-  };
-  const TopRated = async () => {
-    fetch(
-      "https://api.themoviedb.org/3/movie/top_rated?api_key=27686585f73b546ff5ecdbb27242c80c"
-    )
-      .then((res) => res.json())
-      .then((json) => setTopRatedMovie(json.results))
-      .catch((error) => console.log(error));
-  };
-  useEffect(() => {
-    getData();
-    getNowPlaying()
-    upComing()
-    TopRated()
-  }, []);
+
 
   console.log({ PopularMovie });
   return (
@@ -111,7 +72,11 @@ const HomePage = () => {
         </div>
       </div>
       {/* <div className=" h-44 w-full"></div> */}
-      <Footer />
+      <Footer
+        PopularMovie={PopularMovie}
+        UpcomingMovies={UpcomingMovies}
+        NowPlaying={NowPlaying}
+      />
     </>
   );
 };

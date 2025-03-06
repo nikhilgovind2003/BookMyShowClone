@@ -1,15 +1,16 @@
-import React from 'react'
-import '../../src/App.css'
-import MovieNavbar from '../Components/navbar/MovieNavbar'
-import MovieHero from '../Components/movieHero/MovieHero.component'
+import React from "react";
+import "../../src/App.css";
+import MovieNavbar from "../Components/navbar/MovieNavbar";
+import MovieHero from "../Components/movieHero/MovieHero.component";
 const MovietLayout = (props) => {
+  console.log(props);
   return (
     <>
-    <MovieNavbar />
-    <MovieHero />
+      <MovieNavbar />
+      <MovieHero />
       {props.children}
     </>
-  )
-}
+  );
+};
 
-export default MovietLayout
+export default MovietLayout;

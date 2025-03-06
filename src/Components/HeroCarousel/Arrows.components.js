@@ -8,12 +8,13 @@ export const PrevArrow = (props) => {
         style={{
           ...props.style,
           backgroundColor: "rgba(0,0,0,0.5)",
-          padding: "20px",
           width: "60px",
+          padding: "30px 0",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginLeft: "-45px",
+          paddingTop: "35px",
+          marginLeft: "-2px",
           borderRadius: "3px",
         }}
         onClick={props.onClick}
@@ -51,7 +52,7 @@ export const NextArrow = (props) => {
           alignItems: "center",
           justifyContent: "center",
           paddingTop: "35px",
-          marginRight: "-47px",
+          marginRight: "-2px",
           borderRadius: "3px",
         }}
         onClick={props.onClick}
